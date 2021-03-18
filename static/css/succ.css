@@ -1,0 +1,29 @@
+body{
+    background-image: url("../images/Atm_bg.jpg");
+    background-size: cover;
+}
+h1{
+
+    color: black;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+
+    margin-top: 100px;
+
+}
+button{
+    background-color: black;
+    box-sizing: border-box;
+    border: blue;
+    opacity:95%;
+    box-shadow: -10px 10px 10px rgba(207, 189, 189, 0.3);
+    border-radius: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color:white;
+    padding: 10px;
+    margin-left: 725px;
+    margin-top: 150px;
+}

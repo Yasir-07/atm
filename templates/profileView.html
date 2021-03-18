@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ATM</title>
+    <link rel="stylesheet" href="{% static 'css/profileview.css' %}">
+  </head>
+  <body>
+    <h1>Profile</h1>
+    {% for customer in customers %}
+    <div>
+    <form method='post' action='profile'>
+      {% csrf_token %}
+    <button type="image" name="cust" alt="Login" value="{{customer.customerID}}"></button>
+    </form>
+    <p>{{customer.first_name}}  {{customer.last_name}}</p>
+  </div>
+    {%endfor%}
+  <a href="{% url 'Atm_app:options'%}" ><button>Back</button></a>
+  </body>
+</html>

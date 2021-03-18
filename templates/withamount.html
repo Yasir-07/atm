@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+    <link rel="stylesheet" href="{% static 'css/withdraw.css' %}">
+</head>
+<body>
+    <form action="amount_with" method="post">
+      {% csrf_token %}
+      <p>amount
+          <input type="text" placeholder="0000.00" name='amount' pattern="[0-9]+(\.[0-9]{1,2})?%?">
+      </p>
+        <button type="submit">Next</button>
+    </form>
+<a href="{% url 'Atm_app:options'%}" ><button>Back</button></a>
+{% for message in messages %}
+  <h1>{{ message }}<h2>
+{% endfor %}
+</body>
+</html>
